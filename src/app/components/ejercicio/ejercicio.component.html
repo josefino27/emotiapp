@@ -1,0 +1,12 @@
+<ion-card >
+  <ion-card-header> EJERCICIO # {{ indice+1 }}
+    <ion-card-subtitle *ngIf="rutina.category.name">categoria: {{ rutina.category.name }} </ion-card-subtitle>
+    <ion-card-title>{{ rutina.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row *ngFor="let imagen of rutina.images">
+      <ion-col size="12"><img src="{{ imagen.image }}"></ion-col>
+    </ion-row>
+    
+  </ion-card-content>
+</ion-card>

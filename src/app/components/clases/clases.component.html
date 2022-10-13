@@ -1,0 +1,14 @@
+<ion-grid fixed>
+  <ion-row 
+    size="6" 
+    size-lg="3" 
+    size-md="4" 
+    size-sm="6" 
+    size-xs="12"
+    *ngFor="let clase of clases"
+    >
+    <ion-col >
+      <app-clase [clase]="clase"></app-clase>
+    </ion-col>
+  </ion-row>
+</ion-grid>

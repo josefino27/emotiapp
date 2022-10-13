@@ -1,0 +1,42 @@
+<app-header titulo="calcular-imc"></app-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Altura en Centimetros <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input  [(ngModel)]="altura" type="number" ></ion-input>
+  </ion-item>
+     <ion-item>
+      <ion-label position="floating">Peso en Kilogramos <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input  [(ngModel)]="peso"  type="number"  ></ion-input>
+     </ion-item>
+      
+     <span id="resultado">
+      el resultado es:
+      <div *ngIf="resultado<18.5">
+        <p class="desnutrido"> desnutrido </p>
+      </div>  
+      <div *ngIf="resultado>=18.5 && resultado<=25.0">
+        <p class="ideal"> usted esta en su peso ideal</p>
+      </div>  
+      <div *ngIf="resultado>25.0  && resultado<30">
+        <p class="sobrepeso"> sobrepeso </p>
+      </div> 
+      <div *ngIf="resultado>30">
+        <p class="obeso"> obesosidad </p>
+      </div> 
+     </span>
+     <br>
+     <br>
+     <br>
+    <ion-button block color="primary" (click)="imc()">
+      calcular
+    </ion-button>
+
+    <ion-button block color="primary" (click)="reset()">
+      reset
+    </ion-button>
+
+   
+
+</ion-content>

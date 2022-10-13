@@ -1,0 +1,11 @@
+<app-header titulo="Rutina Ejercicios"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-ejercicios [rutinas]="rutinas"></app-ejercicios>
+  <ion-infinite-scroll threshold="150px" position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando rutinas...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

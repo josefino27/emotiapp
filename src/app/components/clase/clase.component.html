@@ -1,0 +1,54 @@
+<ion-card>
+
+  <ion-card-header>
+    clase Id #{{clase.id_clase}}
+    <ion-card-subtitle>{{ clase.descripcion }} </ion-card-subtitle>
+    <ion-card-title>{{ clase.nombreClase }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list-header>
+          <ion-label>Fecha</ion-label>
+          <ion-label>{{clase.fecha}}</ion-label>
+        </ion-list-header>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list-header>
+          <ion-label>Hora Comienza: </ion-label>
+          <ion-label>{{clase.comienza}} </ion-label>
+        </ion-list-header>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list-header>
+          <ion-label>Hora Termina:</ion-label>
+          <ion-label> {{clase.termina}}</ion-label>
+        </ion-list-header>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list-header>
+          <ion-label>Cupos Abiertos:</ion-label>
+          <ion-label> {{clase.cupo}}</ion-label>
+        </ion-list-header>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-img [src]="'http://127.0.0.1:8000/storage/'+clase.imagen"></ion-img>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card-content>
+</ion-card>

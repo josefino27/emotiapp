@@ -1,0 +1,20 @@
+<app-header titulo="categorias"></app-header>
+  <ion-content [fullscreen]="true">
+    <ion-segment scrollable color="dark"
+        mode="md"
+        (ionChange)="cambioEmocion($event)">
+      <!-- <ion-segment-button 
+        *ngFor="let emocion of emociones"  
+        [value]="emocion">
+      <ion-label >ID: {{emocion}}</ion-label>
+      </ion-segment-button> -->
+
+      <ion-segment-button 
+      *ngFor="let emocion of emocion"  
+      [value]="emocion">
+    <ion-label >{{emocion}}</ion-label>
+    </ion-segment-button>
+    </ion-segment>
+    <app-ejercicios [rutinas]="rutinas" [x]="x"></app-ejercicios>
+
+</ion-content>

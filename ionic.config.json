@@ -1,0 +1,7 @@
+{
+  "name": "emotiapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
